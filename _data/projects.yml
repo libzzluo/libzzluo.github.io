@@ -1,0 +1,4 @@
+- name: SAR-LAB Copilot
+  description: An LLM Agent for SAR image analysis and interpretation
+  image: /assets/img/1776620145202.png
+  status: Coming Soon

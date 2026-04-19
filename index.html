@@ -77,5 +77,23 @@ layout: default
     </div>
   </div>
 </div>
-  
+
+    <h1 class="page-title">🛠️ Engineering Projects</h1>
+    <div class="projects-grid">
+      {% for project in site.data.projects %}
+      <div class="project-card">
+        <div class="project-image">
+          <img src="{{ project.image }}" alt="{{ project.name }}">
+        </div>
+        <div class="project-info">
+          <h3 class="project-name">{{ project.name }}</h3>
+          <p class="project-desc">{{ project.description }}</p>
+          {% if project.status %}
+          <span class="project-status">{{ project.status }}</span>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
 </div>
