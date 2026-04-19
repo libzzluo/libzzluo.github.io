@@ -71,7 +71,11 @@ $bp-mobile-large: 500px;
   background: #fef6eb;
 }
 
-/* ===== Engineering Projects 卡片网格 ===== */
+/* ===== Projects 卡片网格 ===== */
+.section-projects {
+  margin-top: 3rem;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -92,10 +96,16 @@ $bp-mobile-large: 500px;
   }
 }
 
+.project-image {
+  text-align: center;
+  padding: 0.8rem 0.8rem 0;
+}
+
 .project-image img {
-  width: 100%;
+  width: 80%;
   height: auto;
-  display: block;
+  display: inline-block;
+  border-radius: 6px;
 }
 
 .project-info {
@@ -104,20 +114,26 @@ $bp-mobile-large: 500px;
 
 .project-name {
   margin: 0 0 0.3rem;
-  font-size: 16pt;
+  font-size: 17pt;
   color: $black;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, $black 60%, $blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .project-desc {
   margin: 0 0 0.8rem;
   font-size: 13pt;
   color: #555;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .project-status {
   display: inline-block;
-  padding: 0.2rem 0.7rem;
+  padding: 0.25rem 0.8rem;
   font-size: 10pt;
   font-weight: 600;
   color: $white;
@@ -125,6 +141,12 @@ $bp-mobile-large: 500px;
   border-radius: 12px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
 }
 
 @include media-query($bp-tablet-large) {
